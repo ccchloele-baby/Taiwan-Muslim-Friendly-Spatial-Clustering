@@ -1,0 +1,205 @@
+# Muslim-Friendly Tourism Ecosystems in Taiwan's Major Cities
+
+## Project Title
+
+**Are Muslim-Friendly Tourism Ecosystems Emerging in Taiwan's Major Cities?**  
+**A Spatial Comparison of Taipei, Taichung, and Kaohsiung**
+
+## Authors
+
+Group 9:
+
+- Le Thanh Thao
+- Tran Thi Minh Anh
+- Bitna Han
+
+Date: June 2026
+
+## Overview
+
+This project investigates whether Muslim-friendly tourism ecosystems are emerging in three major Taiwanese cities: **Taipei, Taichung, and Kaohsiung**. Instead of evaluating destination readiness only by counting halal-certified facilities, the study examines whether hotels, halal restaurants, tourist attractions, prayer facilities, and MRT access are spatially arranged in ways that support real tourist movement.
+
+The study argues that Muslim-friendly tourism readiness should be understood as an **accessibility ecosystem**. A city may have many certified facilities, but those facilities become more useful when they are close to hotels, attractions, prayer spaces, and public transport corridors.
+
+## Research Questions
+
+The main research question is:
+
+> What spatial relationships exist between halal-certified hotels, halal restaurants, tourist attractions, prayer facilities, and MRT access in Taipei, Taichung, and Kaohsiung, and do these relationships indicate the emergence of Muslim-friendly tourism ecosystems at the city level?
+
+The study also asks:
+
+- Are Muslim-friendly tourism resources spatially concentrated or randomly distributed within each city?
+- How accessible are halal restaurants, tourist attractions, and prayer facilities from halal-certified hotels?
+- Which cities and districts meet the spatial threshold to qualify as Muslim-friendly tourism ecosystems?
+
+## Study Area
+
+The analysis compares three major cities in Taiwan:
+
+- **Taipei**: Taiwan's capital and most mature international tourism gateway.
+- **Taichung**: An intermediate urban tourism case with fewer halal-certified accommodation records.
+- **Kaohsiung**: A southern metropolitan destination with strong tourism potential and a visible transit corridor.
+
+## Data Sources
+
+The project uses the following spatial data groups:
+
+- Halal-certified hotels and restaurants
+- Tourist attractions
+- Prayer rooms and mosques
+- MRT station coordinates
+- Administrative district boundaries
+
+Main sources include:
+
+- Taiwan Tourism Administration Muslim-friendly dining and accommodation records
+- Taiwan Tourism Administration open tourist attraction data
+- Muslim-friendly facility and mosque records
+- MRT station coordinate data
+- Ministry of the Interior administrative boundary spatial data
+- Halal Formosa as a supplementary contextual source
+
+All spatial layers were projected to **TWD97 / EPSG:3826** so that distance calculations could be measured in meters.
+
+## Methodology
+
+The analysis follows four stages.
+
+### Stage 1: Exploratory Spatial Data Analysis
+
+Facility layers were mapped to compare the spatial distribution of hotels, restaurants, hotel-restaurants, attractions, prayer facilities, and MRT stations across the three cities.
+
+![Stage 1 facility distribution across Taipei, Taichung, and Kaohsiung](outputs/figures/figure-1-stage-1-facility-distribution.png)
+
+*Figure 1. Muslim-friendly tourism infrastructure in Taipei, Taichung, and Kaohsiung.*
+
+### Stage 2: Distance-Based Accessibility
+
+Nearest-neighbor distances were calculated from each halal-certified hotel to:
+
+- The nearest halal food source
+- The nearest tourist attraction
+- The nearest prayer facility
+
+Hotel & Restaurant records were treated as both accommodation and halal food infrastructure, but same-facility matches were excluded to avoid artificial zero-distance results.
+
+![Stage 2 distance distribution by facility type and city](outputs/figures/figure-2-stage-2-distance-distribution.png)
+
+*Figure 2. Distribution of nearest facility distances by city. Dashed line = 500 m threshold; dotted line = 1 km threshold.*
+
+### Stage 3: Spatial Concentration and MRT Overlay
+
+District-level support intensity, Kernel Density Estimation (KDE), MRT-overlay mapping, and Global Moran's I were used to evaluate spatial concentration. The KDE surface used an 800 m bandwidth, and district-level spatial autocorrelation was tested using queen contiguity weights.
+
+![Stage 3 KDE concentration with MRT overlay](outputs/figures/figure-3-stage-3-kde-mrt-overlay.png)
+
+*Figure 3. KDE concentration map with MRT station proximity overlay.*
+
+### Stage 4: Ecosystem Qualification
+
+A hotel was classified as an ecosystem-qualifying node if it had:
+
+- At least one halal food source within 1 km
+- At least one tourist attraction within 1 km
+
+A stricter 500 m threshold was also tested to identify more compact walkable ecosystems. Prayer facilities were reported as supplementary support because they are important for Muslim traveler comfort but are less numerous in the dataset.
+
+![Stage 4 ecosystem-qualifying halal hotels](outputs/figures/figure-4-stage-4-ecosystem-hotels.png)
+
+*Figure 4. Ecosystem qualification by halal hotel location.*
+
+## Key Results
+
+### Cleaned Facility Counts
+
+| City | Hotels | Hotel & Restaurant | Restaurants | Attractions | Prayer Rooms | Mosques | MRT Stations |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Taipei | 43 | 9 | 43 | 80 | 30 | 4 | 73 |
+| Taichung | 3 | 4 | 20 | 15 | 3 | 2 | 14 |
+| Kaohsiung | 23 | 8 | 5 | 41 | 2 | 2 | 28 |
+
+### Hotel-Based Accessibility
+
+| City | Hotels | Restaurant Median | Restaurant <= 1 km | Attraction Median | Attraction <= 1 km | Prayer Median | Prayer <= 1 km |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Kaohsiung | 31 | 634 m | 68% | 419 m | 90% | 1,500 m | 32% |
+| Taichung | 7 | 702 m | 57% | 796 m | 57% | 2,076 m | 14% |
+| Taipei | 52 | 419 m | 88% | 334 m | 90% | 832 m | 60% |
+
+### Ecosystem Qualification
+
+| City | Hotels | 1 km Qualified | 1 km Rate | 500 m Qualified | 500 m Rate | Prayer within 1 km |
+|---|---:|---:|---:|---:|---:|---:|
+| Kaohsiung | 31 | 21 | 67.7% | 9 | 29.0% | 32.3% |
+| Taichung | 7 | 4 | 57.1% | 2 | 28.6% | 14.3% |
+| Taipei | 52 | 43 | 82.7% | 23 | 44.2% | 59.6% |
+
+![Stage 4 ecosystem qualification rate by city](outputs/figures/figure-5-stage-4-qualification-rate.png)
+
+*Figure 5. Ecosystem qualification rates at 1 km and 500 m thresholds.*
+
+## Findings
+
+Taipei has the most complete Muslim-friendly tourism ecosystem among the three cities. It has the highest facility density, the strongest hotel-to-restaurant accessibility, strong hotel-to-attraction accessibility, more prayer facilities, and the most extensive MRT network.
+
+Kaohsiung shows a meaningful but more corridor-based ecosystem. Its hotels are often close to attractions, and many halal facilities align with MRT-accessible areas. However, halal restaurant availability and prayer facility accessibility remain weaker than in Taipei.
+
+Taichung is the least mature ecosystem in the current analysis. It has fewer halal-certified hotels in the final dataset and weaker overlap among hotels, restaurants, attractions, prayer facilities, and MRT access.
+
+The Global Moran's I results were not statistically significant for any city, which suggests that the strongest spatial pattern is not broad district-scale clustering. Instead, KDE and MRT-overlay maps show a more practical tourism pattern: halal-certified facilities often align with central areas, transport corridors, and visitor-accessible nodes.
+
+## Planning Implications
+
+The findings suggest that Muslim-friendly tourism development should focus on spatial gap-closing rather than only increasing facility counts. Useful strategies include:
+
+- Supporting halal certification near hotel areas that already have nearby tourist attractions
+- Adding prayer rooms near major attractions, MRT stations, visitor centers, malls, museums, and selected hotels
+- Using MRT-accessible districts as anchors for Muslim-friendly tourism planning
+- Improving official maps, multilingual information, QR-code guides, and online visibility of certified facilities
+- Combining spatial analysis with social feedback from reviews, travel blogs, and Muslim traveler communities
+
+## Conclusion
+
+Muslim-friendly tourism ecosystems are emerging unevenly across Taiwan's major cities. Taipei can be interpreted as a mature but still incomplete ecosystem, Kaohsiung as an emerging corridor-based ecosystem, and Taichung as a developing ecosystem with localized potential.
+
+The main conclusion is that Muslim-friendly tourism readiness is not only an inventory of certified facilities. It is an accessibility ecosystem formed by the spatial relationship among accommodation, halal food, attractions, prayer support, public transport, and trusted visitor information.
+
+## Suggested Repository Structure
+
+```text
+.
+├── README.md
+├── data/
+│   ├── raw/
+│   └── cleaned/
+├── scripts/
+│   └── analysis.R
+├── outputs/
+│   ├── maps/
+│   ├── tables/
+│   └── figures/
+└── report/
+    └── Group_9_Muslim_Friendly_Tourism_Ecosystems_Taiwan.pdf
+```
+
+## Software
+
+This project can be reproduced with R and common spatial analysis packages, such as:
+
+- `sf`
+- `dplyr`
+- `ggplot2`
+- `spdep`
+- `tmap`
+- `readxl`
+
+## References
+
+- Al-Ansi, A., & Han, H. (2019). Role of halal-friendly destination performances, value, satisfaction, and trust in generating destination loyalty. *Journal of Destination Marketing & Management, 14*, 100377.
+- Battour, M., & Ismail, M. N. (2016). Halal tourism: Concepts, practises, challenges and future. *Tourism Management Perspectives, 19*, 150-154.
+- CrescentRating & Mastercard. (2024). *Global Muslim Travel Index 2024*. CrescentRating.
+- Taiwan Tourism Administration. (2026). Muslim-friendly Environment: Dining & Accommodation. https://eng.taiwan.net.tw/m1.aspx?sNo=0020323
+- Halal Formosa. (2026). Halal Formosa: Halal map and ingredient scanner in Taiwan. https://halalformosa.com
+- Taiwan Tourism Administration Open Data. (2026). Tourist attraction dataset. Ministry of Transportation and Communications, Taiwan.
+- Ministry of the Interior, Taiwan. (2026). Administrative boundary spatial data. National land and geospatial open data.
