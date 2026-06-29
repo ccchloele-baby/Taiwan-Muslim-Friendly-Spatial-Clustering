@@ -166,34 +166,6 @@ Muslim-friendly tourism ecosystems are emerging unevenly across Taiwan's major c
 
 The main conclusion is that Muslim-friendly tourism readiness is not only an inventory of certified facilities. It is an accessibility ecosystem formed by the spatial relationship among accommodation, halal food, attractions, prayer support, public transport, and trusted visitor information.
 
-## Suggested Repository Structure
-
-```text
-.
-├── README.md
-├── data/
-│   ├── raw/
-│   └── cleaned/
-├── scripts/
-│   └── analysis.R
-├── outputs/
-│   ├── maps/
-│   ├── tables/
-│   └── figures/
-└── report/
-    └── Group_9_Muslim_Friendly_Tourism_Ecosystems_Taiwan.pdf
-```
-
-## Software
-
-This project can be reproduced with R and common spatial analysis packages, such as:
-
-- `sf`
-- `dplyr`
-- `ggplot2`
-- `spdep`
-- `tmap`
-- `readxl`
 
 ## References
 
