@@ -70,7 +70,7 @@ The analysis follows four stages.
 
 Facility layers were mapped to compare the spatial distribution of hotels, restaurants, hotel-restaurants, attractions, prayer facilities, and MRT stations across the three cities.
 
-![Stage 1 facility distribution across Taipei, Taichung, and Kaohsiung](outputs/figures/figure-1-stage-1-facility-distribution.png)
+<img width="8100" height="3000" alt="stage1_comparison" src="https://github.com/user-attachments/assets/dd3a0b13-e308-4d48-9891-50a619513145" />
 
 *Figure 1. Muslim-friendly tourism infrastructure in Taipei, Taichung, and Kaohsiung.*
 
@@ -84,7 +84,7 @@ Nearest-neighbor distances were calculated from each halal-certified hotel to:
 
 Hotel & Restaurant records were treated as both accommodation and halal food infrastructure, but same-facility matches were excluded to avoid artificial zero-distance results.
 
-![Stage 2 distance distribution by facility type and city](outputs/figures/figure-2-stage-2-distance-distribution.png)
+<img width="3000" height="2100" alt="stage2_boxplots" src="https://github.com/user-attachments/assets/cc2816fc-063a-4e6e-8cf0-541b5830b5d6" />
 
 *Figure 2. Distribution of nearest facility distances by city. Dashed line = 500 m threshold; dotted line = 1 km threshold.*
 
@@ -92,7 +92,7 @@ Hotel & Restaurant records were treated as both accommodation and halal food inf
 
 District-level support intensity, Kernel Density Estimation (KDE), MRT-overlay mapping, and Global Moran's I were used to evaluate spatial concentration. The KDE surface used an 800 m bandwidth, and district-level spatial autocorrelation was tested using queen contiguity weights.
 
-![Stage 3 KDE concentration with MRT overlay](outputs/figures/figure-3-stage-3-kde-mrt-overlay.png)
+<img width="8400" height="3000" alt="stage3_kde_mrt_comparison" src="https://github.com/user-attachments/assets/e5bb3045-0019-43ae-b88d-31fa98eb934c" />
 
 *Figure 3. KDE concentration map with MRT station proximity overlay.*
 
@@ -105,9 +105,11 @@ A hotel was classified as an ecosystem-qualifying node if it had:
 
 A stricter 500 m threshold was also tested to identify more compact walkable ecosystems. Prayer facilities were reported as supplementary support because they are important for Muslim traveler comfort but are less numerous in the dataset.
 
-![Stage 4 ecosystem-qualifying halal hotels](outputs/figures/figure-4-stage-4-ecosystem-hotels.png)
+<img width="2400" height="1800" alt="stage4_qualification_rates" src="https://github.com/user-attachments/assets/c8a9992e-afa3-424c-9502-4574a78a6003" />
 
 *Figure 4. Ecosystem qualification by halal hotel location.*
+<img width="7200" height="3000" alt="stage4_ecosystem_maps" src="https://github.com/user-attachments/assets/b5db2f85-ca34-412a-ba40-fc1a8df75aca" />
+
 
 ## Key Results
 
