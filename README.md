@@ -105,10 +105,9 @@ A hotel was classified as an ecosystem-qualifying node if it had:
 
 A stricter 500 m threshold was also tested to identify more compact walkable ecosystems. Prayer facilities were reported as supplementary support because they are important for Muslim traveler comfort but are less numerous in the dataset.
 
-<img width="2400" height="1800" alt="stage4_qualification_rates" src="https://github.com/user-attachments/assets/c8a9992e-afa3-424c-9502-4574a78a6003" />
+<img width="7200" height="3000" alt="stage4_ecosystem_maps" src="https://github.com/user-attachments/assets/b5db2f85-ca34-412a-ba40-fc1a8df75aca" />
 
 *Figure 4. Ecosystem qualification by halal hotel location.*
-<img width="7200" height="3000" alt="stage4_ecosystem_maps" src="https://github.com/user-attachments/assets/b5db2f85-ca34-412a-ba40-fc1a8df75aca" />
 
 
 ## Key Results
@@ -137,7 +136,7 @@ A stricter 500 m threshold was also tested to identify more compact walkable eco
 | Taichung | 7 | 4 | 57.1% | 2 | 28.6% | 14.3% |
 | Taipei | 52 | 43 | 82.7% | 23 | 44.2% | 59.6% |
 
-![Stage 4 ecosystem qualification rate by city](outputs/figures/figure-5-stage-4-qualification-rate.png)
+<img width="2400" height="1800" alt="stage4_qualification_rates" src="https://github.com/user-attachments/assets/c8a9992e-afa3-424c-9502-4574a78a6003" />
 
 *Figure 5. Ecosystem qualification rates at 1 km and 500 m thresholds.*
 
